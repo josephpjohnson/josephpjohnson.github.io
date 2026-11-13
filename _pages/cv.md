@@ -1,64 +1,25 @@
 ---
 layout: archive
-title: "CV"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+[Download full CV (PDF)](/files/CV.pdf)
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+### Academic Positions
+* **National Post Doctoral Fellow (NPDF)**  
+  The Institute of Mathematical Sciences (IMSc), Chennai, India
+* **Research Associate**  
+  Indian Institute of Science Education and Research (IISER) Mohali, India
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+### Education
+* **Ph.D. in Physics (Cosmology & Gravitation)**  
+  Indian Institute of Technology Bombay (IIT Bombay), Mumbai, India
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+### Technical & Computational Skills
+* **Cosmology & Boltzmann Codes:** `CLASS`, `Cobaya`, `MontePython`
+* **Programming & Symbolic Computation:** C, C++, Python (`NumPy`, `SciPy`, `Matplotlib`), Mathematica, Bash, Git, LaTeX
+* **Statistical & Data Analysis:** Bayesian MCMC parameter estimation, Gaussian Process reconstruction, CMB & Large-Scale Structure likelihoods
