@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talks — Joseph P J</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Joseph <span>P J</span></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="talks.html" class="active">Talks</a>
+        <a href="cv.html">CV &amp; Experience</a>
+        <button class="theme-btn" id="theme-toggle" title="Toggle theme">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <div class="section-header">
+        <h2>Selected Talks &amp; Presentations</h2>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">Cosmological Perturbations and Observational Constraints in the Interacting Dark Sector</div>
+        <div class="pub-authors">Invited Seminar / Conference Talk</div>
+        <div class="pub-meta"><span class="journal-badge">Add venue &amp; year from your Google Site</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Joseph P J · The Institute of Mathematical Sciences, Chennai</div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    btn.onclick = () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    };
+  </script>
+</body>
+</html>

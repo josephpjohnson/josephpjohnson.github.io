@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV &amp; Experience — Joseph P J</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Joseph <span>P J</span></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="talks.html">Talks</a>
+        <a href="cv.html" class="active">CV &amp; Experience</a>
+        <button class="theme-btn" id="theme-toggle" title="Toggle theme">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <div class="section-header">
+        <h2>Curriculum Vitae &amp; Experience</h2>
+        <a href="files/CV.pdf" class="btn btn-primary" target="_blank">Download PDF CV</a>
+      </div>
+
+      <div class="grid-3" style="grid-template-columns: 1.2fr 0.9fr; gap: 2rem;">
+        <div>
+          <h3 style="margin-bottom: 1.25rem;">Academic Positions</h3>
+          <div class="timeline-item">
+            <div class="card-tag">Current</div>
+            <h4>National Post Doctoral Fellow (NPDF)</h4>
+            <p style="color: var(--text-muted);">The Institute of Mathematical Sciences (IMSc), Chennai, India</p>
+          </div>
+          <div class="timeline-item">
+            <div class="card-tag">Postdoctoral</div>
+            <h4>Research Associate</h4>
+            <p style="color: var(--text-muted);">Indian Institute of Science Education and Research (IISER) Mohali, India</p>
+          </div>
+
+          <h3 style="margin: 2rem 0 1.25rem;">Education</h3>
+          <div class="timeline-item">
+            <div class="card-tag">Doctorate</div>
+            <h4>Ph.D. in Physics (Cosmology &amp; Gravitation)</h4>
+            <p style="color: var(--text-muted);">Indian Institute of Technology Bombay (IIT Bombay), Mumbai, India</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="margin-bottom: 1.25rem;">Computational &amp; Research Skills</h3>
+          <div class="card" style="margin-bottom: 1rem;">
+            <div class="card-tag">Cosmology &amp; Inference</div>
+            <p>Boltzmann Solvers (<code>CLASS</code>), Bayesian MCMC Parameter Estimation (<code>Cobaya</code>, <code>MontePython</code>), Gaussian Process Reconstruction, CMB &amp; LSS Likelihood Analysis.</p>
+          </div>
+          <div class="card">
+            <div class="card-tag">Programming &amp; Tools</div>
+            <p>C, C++, Python (<code>NumPy</code>, <code>SciPy</code>, <code>Matplotlib</code>), Mathematica, MPI Parallelization, Linux/Bash, Git, LaTeX.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Joseph P J · The Institute of Mathematical Sciences, Chennai</div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    btn.onclick = () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications — Joseph P J</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Joseph <span>P J</span></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html" class="active">Publications</a>
+        <a href="talks.html">Talks</a>
+        <a href="cv.html">CV &amp; Experience</a>
+        <button class="theme-btn" id="theme-toggle" title="Toggle theme">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <div class="section-header">
+        <h2>Publications &amp; Preprints</h2>
+        <div>
+          <a href="https://google.com" class="pill-link" target="_blank">Google Scholar ↗</a>
+          <a href="https://inspirehep.net" class="pill-link" target="_blank">INSPIRE-HEP ↗</a>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">1. Disformal interactions in the dark sector: From driving early dark energy to confronting cosmological tensions</div>
+        <div class="pub-authors">P. Bansal, <strong>J. P. Johnson</strong>, S. Shankaranarayanan</div>
+        <div class="pub-meta"><span class="journal-badge">Physical Review D 112 (12), 124078 (2025)</span></div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">2. Kernel dependence of the Gaussian process reconstruction of late Universe expansion history</div>
+        <div class="pub-authors"><strong>J. P. Johnson</strong>, H. K. Jassal</div>
+        <div class="pub-meta"><span class="journal-badge">The European Physical Journal C 85 (9), 996 (2025)</span></div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">3. Interacting dark sector from Horndeski theories and beyond: Mapping fields and fluids</div>
+        <div class="pub-authors">P. Bansal, <strong>J. P. Johnson</strong>, S. Shankaranarayanan</div>
+        <div class="pub-meta"><span class="journal-badge">Physical Review D 111 (2), 024071 (2025)</span></div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">4. Test of Einstein's equivalence principle in future VLBI observations</div>
+        <div class="pub-authors"><strong>J. P. Johnson</strong>, S. Jana, S. Shankaranarayanan</div>
+        <div class="pub-meta"><span class="journal-badge">Physical Review D 109 (2), L021501 (2024)</span></div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">5. Modified theories of gravity: Why, how and what?</div>
+        <div class="pub-authors">S. Shankaranarayanan, <strong>J. P. Johnson</strong></div>
+        <div class="pub-meta"><span class="journal-badge">General Relativity and Gravitation 54 (5), 44 (2022)</span></div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">6. Can we bypass no-go theorem for Ricci-inverse gravity?</div>
+        <div class="pub-authors">I. Das, <strong>J. P. Johnson</strong>, S. Shankaranarayanan</div>
+        <div class="pub-meta"><span class="journal-badge">The European Physical Journal Plus 137 (11), 1–24 (2022)</span></div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">7. Observational constraints and predictions of the interacting dark sector with field-fluid mapping</div>
+        <div class="pub-authors"><strong>J. P. Johnson</strong>, A. Sangwan, S. Shankaranarayanan</div>
+        <div class="pub-meta"><span class="journal-badge">JCAP 01, 024 (2022)</span></div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">8. Cosmological perturbations in the interacting dark sector: Mapping fields and fluids</div>
+        <div class="pub-authors"><strong>J. P. Johnson</strong>, S. Shankaranarayanan</div>
+        <div class="pub-meta"><span class="journal-badge">Physical Review D 103 (2), 023510 (2021)</span></div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">9. Low-energy modified gravity signatures on the large-scale structures</div>
+        <div class="pub-authors"><strong>J. P. Johnson</strong>, S. Shankaranarayanan</div>
+        <div class="pub-meta"><span class="journal-badge">Physical Review D 100 (8), 083526 (2019)</span></div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">10. Exact inflationary solutions in exponential gravity</div>
+        <div class="pub-authors"><strong>J. P. Johnson</strong>, J. Mathew, S. Shankaranarayanan</div>
+        <div class="pub-meta"><span class="journal-badge">General Relativity and Gravitation 51 (3), 45 (2019)</span></div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">11. Inflation with f(R) in Jordan frame</div>
+        <div class="pub-authors">J. Mathew, <strong>J. P. Johnson</strong>, S. Shankaranarayanan</div>
+        <div class="pub-meta"><span class="journal-badge">General Relativity and Gravitation 50 (7), 90 (2018)</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Joseph P J · The Institute of Mathematical Sciences, Chennai</div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    btn.onclick = () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    };
+  </script>
+</body>
+</html>

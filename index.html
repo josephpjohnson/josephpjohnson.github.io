@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joseph P J — Cosmology & Gravitation</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Joseph <span>P J</span></a>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="talks.html">Talks</a>
+        <a href="cv.html">CV &amp; Experience</a>
+        <button class="theme-btn" id="theme-toggle" title="Toggle theme">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="badge">National Post Doctoral Fellow · IMSc Chennai</span>
+        <h1>Exploring the Dark Universe &amp; Tests of Gravity.</h1>
+        <p class="lead">
+          I am a theoretical and observational cosmologist at <strong>The Institute of Mathematical Sciences (IMSc)</strong>, Chennai. My work bridges field-fluid dark energy interactions, modified gravity signatures on large-scale structures, and Bayesian reconstruction of cosmological data.
+        </p>
+        <div class="btn-group">
+          <a href="publications.html" class="btn btn-primary">View Publications →</a>
+          <a href="files/CV.pdf" class="btn" target="_blank">Download CV (PDF)</a>
+          <a href="research.html" class="btn">Research Summary</a>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <img src="images/profile.png" alt="Joseph P J" onerror="this.src='https://ui-avatars.com'" />
+        <h3>Joseph P J</h3>
+        <p class="role">NPDF · Physics Group, IMSc Chennai</p>
+        <div class="social-links">
+          <a href="https://google.com" target="_blank">Google Scholar</a>
+          <a href="https://inspirehep.net" target="_blank">INSPIRE</a>
+          <a href="https://github.com" target="_blank">GitHub</a>
+          <a href="mailto:josephpj@imsc.res.in">Email</a>
+        </div>
+      </aside>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2>Core Research Pillars</h2>
+        <a href="research.html">Detailed summary →</a>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-tag">01 · Dark Sector</div>
+          <h3>Interacting Dark Energy</h3>
+          <p>Field-fluid mappings, coupled quintessence–dark matter dynamics, and disformal interactions tested against CMB and LSS observations.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">02 · Gravitation</div>
+          <h3>Tests of General Relativity</h3>
+          <p>Modified gravity signatures on large-scale structure growth, Horndeski theories, and equivalence principle tests with future VLBI.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">03 · Inference &amp; Numerics</div>
+          <h3>Data Reconstruction &amp; MCMC</h3>
+          <p>Model-independent Gaussian process reconstruction of late-Universe expansion history, Boltzmann solvers (CLASS), and Bayesian inference.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2>Selected Recent Papers</h2>
+        <a href="publications.html">All 11 publications →</a>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">Disformal interactions in the dark sector: From driving early dark energy to confronting cosmological tensions</div>
+        <div class="pub-authors">P. Bansal, <strong>J. P. Johnson</strong>, S. Shankaranarayanan</div>
+        <div class="pub-meta">
+          <span class="journal-badge">Phys. Rev. D 112, 124078 (2025)</span>
+          <a href="https://inspirehep.net" class="pill-link" target="_blank">INSPIRE ↗</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">Kernel dependence of the Gaussian process reconstruction of late Universe expansion history</div>
+        <div class="pub-authors"><strong>J. P. Johnson</strong>, H. K. Jassal</div>
+        <div class="pub-meta">
+          <span class="journal-badge">Eur. Phys. J. C 85, 996 (2025)</span>
+          <a href="https://inspirehep.net" class="pill-link" target="_blank">INSPIRE ↗</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">Test of Einstein's equivalence principle in future VLBI observations</div>
+        <div class="pub-authors"><strong>J. P. Johnson</strong>, S. Jana, S. Shankaranarayanan</div>
+        <div class="pub-meta">
+          <span class="journal-badge">Phys. Rev. D 109, L021501 (2024)</span>
+          <a href="https://inspirehep.net" class="pill-link" target="_blank">INSPIRE ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2>Contact &amp; Office</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-tag">Address</div>
+          <h3>IMSc Chennai</h3>
+          <p>Room F2-B, Main Building, The Institute of Mathematical Sciences, IV Cross Road, CIT Campus, Taramani, Chennai 600 113, India.</p>
+        </div>
+        <div class="card">
+          <div class="card-tag">Direct Email</div>
+          <h3>Get in Touch</h3>
+          <p><a href="mailto:josephpj@imsc.res.in">josephpj@imsc.res.in</a><br /><a href="mailto:josephpjohnsonk@gmail.com">josephpjohnsonk@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Joseph P J · The Institute of Mathematical Sciences, Chennai</div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    btn.onclick = () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Summary — Joseph P J</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Joseph <span>P J</span></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="talks.html">Talks</a>
+        <a href="cv.html">CV &amp; Experience</a>
+        <button class="theme-btn" id="theme-toggle" title="Toggle theme">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <div class="section-header">
+        <h2>Research Summary</h2>
+      </div>
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-tag">01 · Interacting Dark Sector</div>
+        <h3>Field-Fluid Mappings &amp; Coupled Quintessence</h3>
+        <p>Investigating covariant energy-momentum transfer between dark energy scalar fields and cold dark matter, including disformal couplings and Horndeski theories, to test late-time cosmic acceleration and cosmological tensions.</p>
+      </div>
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-tag">02 · Modified Gravity &amp; Tests of GR</div>
+        <h3>Large-Scale Structure &amp; Equivalence Principle</h3>
+        <p>Deriving linear and quasi-linear cosmological perturbations in modified theories of gravity (such as f(R) and Ricci-inverse models) and testing Einstein's equivalence principle with next-generation VLBI observations.</p>
+      </div>
+      <div class="card">
+        <div class="card-tag">03 · Model-Independent Cosmology</div>
+        <h3>Gaussian Process Reconstruction &amp; MCMC Inference</h3>
+        <p>Reconstructing late-Universe expansion history and dark energy evolution without assuming parametric forms, and performing full Boltzmann-level Bayesian parameter inference using CMB, BAO, and supernova datasets.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Joseph P J · The Institute of Mathematical Sciences, Chennai</div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    btn.onclick = () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    };
+  </script>
+</body>
+</html>
