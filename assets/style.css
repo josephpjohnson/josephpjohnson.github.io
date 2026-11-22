@@ -950,138 +950,75 @@ button:focus-visible {
 [data-theme="dark"] .profile-card img {
   border-color: var(--accent-soft);
 }
-/*================================================================*/
-/* =====================================================
-   REFINED ACADEMIC PROFILE CARD
-===================================================== */
+
+/* =========================================================
+   PROFILE CARD — CLEAN VERSION
+========================================================= */
 
 .profile-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   text-align: center;
 
-  padding: 1.5rem 1.4rem;
+  padding: 1.5rem;
+  gap: 0;
 
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
-
   box-shadow: var(--shadow);
-
-  gap: 0;
 }
 
-/* Photograph */
-
 .profile-image {
-  width: 142px;
-  height: 142px;
-
-  margin-bottom: 1rem;
+  width: 145px;
+  height: 145px;
+  margin-bottom: 1.1rem;
 
   border-radius: 50%;
   overflow: hidden;
-
   border: 3px solid var(--accent-soft);
+  flex-shrink: 0;
 }
 
 .profile-image img {
   width: 100%;
   height: 100%;
-
+  max-width: none;
   display: block;
   object-fit: cover;
 }
 
-/* Academic position */
-
 .profile-role {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 600;
-
   color: var(--text);
-
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.45rem;
 }
-
-/* Institutional affiliation */
 
 .profile-affiliation {
   font-size: 0.82rem;
-  line-height: 1.65;
-
+  line-height: 1.6;
   color: var(--text-muted);
-
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.9rem;
 }
 
 .profile-affiliation a {
   color: var(--accent);
-  font-weight: 500;
+  font-weight: 600;
 }
-
-/* Email */
 
 .profile-email {
   width: 100%;
-
   padding: 0.7rem 0;
+  margin-bottom: 0.9rem;
 
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 
-  font-size: 0.84rem;
-  font-weight: 500;
-
-  margin-bottom: 0.85rem;
+  font-size: 0.83rem;
+  overflow-wrap: anywhere;
 }
-
-/* Social links */
-
-.profile-socials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.profile-socials a {
-  font-size: 0.76rem;
-  font-weight: 500;
-
-  color: var(--text-muted);
-
-  padding: 0.35rem 0.55rem;
-
-  border: 1px solid var(--border);
-  border-radius: 5px;
-
-  background: var(--surface-alt);
-
-  transition: all 0.2s ease;
-}
-
-.profile-socials a:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: var(--accent-soft);
-}
-
-/* Mobile */
-
-@media (max-width: 780px) {
-  .profile-card {
-    max-width: 340px;
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
-/* Profile social icon buttons */
 
 .profile-socials {
   display: flex;
@@ -1096,27 +1033,31 @@ button:focus-visible {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.45rem;
+  gap: 6px;
 
-  padding: 0.48rem 0.7rem;
+  padding: 7px 10px;
 
+  background: var(--surface-alt);
   border: 1px solid var(--border);
   border-radius: 6px;
 
-  background: var(--surface);
   color: var(--text);
-
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
-  text-decoration: none;
+  line-height: 1;
 
   transition: all 0.2s ease;
 }
 
 .profile-socials a img {
-  width: 17px;
-  height: 17px;
+  width: 16px !important;
+  height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+
+  display: inline-block !important;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .profile-socials a:hover {
@@ -1126,26 +1067,12 @@ button:focus-visible {
   transform: translateY(-2px);
 }
 
-/* Fix social logo dimensions */
-.profile-socials a img {
-  width: 18px !important;
-  height: 18px !important;
-  max-width: 18px !important;
-  max-height: 18px !important;
-  object-fit: contain;
-  display: inline-block;
-  flex-shrink: 0;
+@media (max-width: 780px) {
+  .profile-card {
+    max-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
-/* Keep buttons compact */
-.profile-socials a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  padding: 7px 11px;
-  font-size: 0.78rem;
-  line-height: 1;
-}
-
-/*========================================================= */
+/*==================== */
