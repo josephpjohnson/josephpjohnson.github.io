@@ -1,4 +1,16 @@
 
+/* =========================================================
+   JOSEPH P J — COSMOLOGY & GRAVITATION
+   Elegant Academic Website
+   Light: Warm Ivory + Petrol Teal
+   Dark: Midnight Navy + Soft Sage
+========================================================= */
+
+
+/* =========================================================
+   1. COLOUR VARIABLES
+========================================================= */
+
 :root {
   color-scheme: light;
 
@@ -14,8 +26,14 @@
   --accent-soft: #E3ECE8;
 
   --border: #E3E0D8;
+
   --shadow: 0 4px 22px rgba(30, 45, 55, 0.045);
+
+  --radius: 10px;
+  --transition: 0.25s ease;
 }
+
+/* Dark theme */
 
 [data-theme="dark"] {
   color-scheme: dark;
@@ -32,5 +50,936 @@
   --accent-soft: #2B403F;
 
   --border: #35444D;
+
   --shadow: 0 4px 22px rgba(0, 0, 0, 0.20);
 }
+
+
+/* =========================================================
+   2. GLOBAL RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: 'DM Sans', 'Inter',
+    -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+
+  background: var(--bg);
+  color: var(--text);
+
+  line-height: 1.7;
+  font-size: 15px;
+
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+/* =========================================================
+   3. TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+.brand,
+.pub-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 4vw, 2.9rem);
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-size: 1.55rem;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   4. NAVIGATION
+========================================================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  background: color-mix(
+    in srgb,
+    var(--bg) 92%,
+    transparent
+  );
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 72px;
+  gap: 1.5rem;
+}
+
+.brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  color: var(--text);
+}
+
+.brand span {
+  color: var(--accent);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  position: relative;
+
+  font-size: 0.88rem;
+  font-weight: 500;
+
+  color: var(--text-muted);
+  white-space: nowrap;
+
+  transition: color var(--transition);
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent);
+}
+
+nav a.active {
+  font-weight: 600;
+}
+
+nav a.active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+
+  width: 100%;
+  height: 2px;
+
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+
+/* =========================================================
+   5. THEME TOGGLE
+========================================================= */
+
+.theme-btn {
+  display: inline-grid;
+  place-items: center;
+
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+
+  background: var(--surface);
+  color: var(--accent);
+
+  cursor: pointer;
+  font-size: 1rem;
+
+  transition: all var(--transition);
+}
+
+.theme-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+
+/* =========================================================
+   6. HERO SECTION
+========================================================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 0.85fr;
+
+  align-items: center;
+  gap: 3rem;
+
+  padding: 5rem 0 4.5rem;
+}
+
+.hero h1 {
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.hero p.lead {
+  font-size: 1.04rem;
+  line-height: 1.9;
+
+  color: var(--text-muted);
+  margin-bottom: 1.8rem;
+}
+
+.hero p.lead strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   7. BADGES AND LABELS
+========================================================= */
+
+.badge {
+  display: inline-block;
+
+  background: var(--accent-soft);
+  color: var(--accent);
+
+  font-size: 0.77rem;
+  font-weight: 600;
+
+  padding: 0.35rem 0.8rem;
+
+  border-radius: 5px;
+  margin-bottom: 1.1rem;
+
+  letter-spacing: 0.025em;
+}
+
+.eyebrow,
+.section-label {
+  display: block;
+
+  color: var(--accent);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  margin-bottom: 0.65rem;
+}
+
+.card-tag {
+  font-size: 0.73rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+
+  color: var(--accent);
+  margin-bottom: 0.65rem;
+}
+
+
+/* =========================================================
+   8. BUTTONS
+========================================================= */
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+
+  padding: 0.68rem 1.2rem;
+
+  border: 1px solid var(--border);
+  border-radius: 7px;
+
+  background: var(--surface);
+  color: var(--text);
+
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  box-shadow: none;
+
+  transition: all var(--transition);
+}
+
+.btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #FFFFFF !important;
+  border-color: var(--accent);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #FFFFFF !important;
+}
+
+.btn-text {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   9. PROFILE CARD
+========================================================= */
+
+.profile-card {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  padding: 1.7rem;
+  text-align: center;
+
+  box-shadow: var(--shadow);
+
+  transition:
+    background var(--transition),
+    border-color var(--transition);
+}
+
+.profile-card img {
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 3px solid var(--accent-soft);
+
+  margin: 0 auto 1rem;
+}
+
+.profile-card h2,
+.profile-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.3rem;
+}
+
+.profile-card .role {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.1rem;
+}
+
+
+/* =========================================================
+   10. SOCIAL LINKS
+========================================================= */
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.55rem;
+
+  flex-wrap: wrap;
+
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.social-links a {
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  padding: 0.35rem 0.65rem;
+
+  border-radius: 5px;
+
+  background: var(--surface-alt);
+  color: var(--text);
+
+  transition: all var(--transition);
+}
+
+.social-links a:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+
+/* =========================================================
+   11. SECTIONS AND HEADINGS
+========================================================= */
+
+section {
+  padding: 2.7rem 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  gap: 1rem;
+
+  margin-bottom: 1.7rem;
+
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.85rem;
+}
+
+.section-header h2 {
+  font-size: 1.55rem;
+}
+
+.section-header a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.section-link {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   12. RESEARCH CARDS
+========================================================= */
+
+.grid-3 {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 1.2rem;
+}
+
+.card {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  padding: 1.5rem;
+
+  box-shadow: none;
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.card h3 {
+  font-size: 1.16rem;
+  margin-bottom: 0.6rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   13. PUBLICATIONS
+========================================================= */
+
+.pub-item {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  padding: 1.35rem 1.5rem;
+  margin-bottom: 1rem;
+
+  box-shadow: none;
+
+  transition:
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.pub-item:hover {
+  border-color: var(--accent);
+}
+
+.pub-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+
+  line-height: 1.55;
+
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+
+.pub-authors {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 0.55rem;
+}
+
+.pub-authors strong {
+  color: var(--text);
+}
+
+.pub-meta {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+}
+
+.journal-badge {
+  background: var(--surface-alt);
+
+  padding: 0.25rem 0.65rem;
+  border-radius: 5px;
+
+  font-weight: 600;
+  font-size: 0.78rem;
+
+  color: var(--text-muted);
+}
+
+.pill-link {
+  padding: 0.25rem 0.65rem;
+
+  border-radius: 5px;
+  border: 1px solid var(--border);
+
+  color: var(--accent);
+  font-weight: 600;
+
+  font-size: 0.8rem;
+  transition: all var(--transition);
+}
+
+.pill-link:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+
+/* =========================================================
+   14. PUBLICATION PROFILE LINKS
+========================================================= */
+
+.publication-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.publication-links .pill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+}
+
+.publication-links .pill-link:hover {
+  transform: translateY(-2px);
+}
+
+.publication-links .pill-link img {
+  width: 19px;
+  height: 19px;
+
+  object-fit: contain;
+  border-radius: 3px;
+}
+
+
+/* =========================================================
+   15. CLICKABLE PUBLICATION TITLES
+========================================================= */
+
+.pub-title a {
+  color: inherit;
+  text-decoration: none;
+
+  transition: color var(--transition);
+}
+
+.pub-title a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+
+/* =========================================================
+   16. DOI, ARXIV AND PDF LINKS
+========================================================= */
+
+.paper-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+  margin-top: 9px;
+
+  font-size: 0.84rem;
+}
+
+.paper-links a {
+  display: inline-block;
+
+  padding: 3px 0;
+
+  color: var(--accent);
+  font-weight: 600;
+
+  transition: color var(--transition);
+}
+
+.paper-links a:hover {
+  color: var(--accent-hover);
+
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+/* =========================================================
+   17. TIMELINE
+========================================================= */
+
+.timeline-item {
+  border-left: 2px solid var(--accent);
+
+  padding-left: 1.25rem;
+  margin-bottom: 1.6rem;
+
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: -6px;
+  top: 6px;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+
+/* =========================================================
+   18. FOOTER
+========================================================= */
+
+footer {
+  margin-top: 3rem;
+
+  border-top: 1px solid var(--border);
+
+  padding: 2rem 0;
+
+  text-align: center;
+
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+/* =========================================================
+   19. ACCESSIBILITY
+========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+
+/* =========================================================
+   20. TABLET RESPONSIVENESS
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    gap: 2rem;
+  }
+
+  nav {
+    gap: 1rem;
+  }
+
+  nav a {
+    font-size: 0.82rem;
+  }
+
+}
+
+
+/* =========================================================
+   21. MOBILE RESPONSIVENESS
+========================================================= */
+
+@media (max-width: 780px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 3rem 0;
+    gap: 2rem;
+  }
+
+  .profile-card {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-inner {
+    min-height: auto;
+
+    padding: 1rem 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0.8rem;
+  }
+
+  nav {
+    width: 100%;
+
+    gap: 1rem;
+
+    overflow-x: auto;
+    flex-wrap: nowrap;
+
+    padding: 0.3rem 0 0.6rem;
+  }
+
+  nav a {
+    flex-shrink: 0;
+  }
+
+  .grid-3 {
+    grid-template-columns:
+      repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+}
+
+
+@media (max-width: 540px) {
+
+  .container {
+    padding: 0 1.1rem;
+  }
+
+  .hero {
+    padding: 2.5rem 0;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero p.lead {
+    font-size: 0.95rem;
+  }
+
+  .btn-group {
+    gap: 0.6rem;
+  }
+
+  .btn {
+    font-size: 0.82rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  section {
+    padding: 2rem 0;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .pub-item {
+    padding: 1.1rem;
+  }
+
+  .pub-title {
+    font-size: 1rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+}
+
+
+/* =========================================================
+   22. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}
+
+
+/* =========================================================
+   23. OPTIONAL DARK THEME IMAGE ADJUSTMENTS
+========================================================= */
+
+[data-theme="dark"] .profile-card img {
+  border-color: var(--accent-soft);
+}
+
+[data-theme="dark"] .journal-badge {
+  background: var(--surface-alt);
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   END OF STYLESHEET
+========================================================= */
