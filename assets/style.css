@@ -1059,11 +1059,11 @@ button:focus-visible {
 .profile-card .profile-socials a img {
   display: block !important;
 
-  width: 28px !important;
-  height: 28px !important;
+  width: 35px !important;
+  height: 35px !important;
 
-  max-width: 28px !important;
-  max-height: 28px !important;
+  max-width: 35px !important;
+  max-height: 35px !important;
 
   object-fit: contain;
   margin: 0 !important;
