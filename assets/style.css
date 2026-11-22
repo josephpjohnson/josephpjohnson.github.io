@@ -950,8 +950,29 @@ button:focus-visible {
 [data-theme="dark"] .profile-card img {
   border-color: var(--accent-soft);
 }
+/*================================================================*/
+.profile-institution {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
 
+.profile-email {
+  font-size: 0.84rem;
+  margin-bottom: 1.1rem;
+}
 
+.profile-institution a,
+.profile-email a {
+  color: var(--accent);
+}
+
+.profile-institution a:hover,
+.profile-email a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 /* =========================================================
    END OF STYLESHEET
 ========================================================= */
