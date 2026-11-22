@@ -1021,61 +1021,47 @@ button:focus-visible {
 }
 
 
+/* Social media icon buttons */
+
 .profile-socials {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 16px;
   width: 100%;
+  margin-top: 0.5rem;
 }
 
 .profile-socials a {
-  display: inline-flex;
-  flex-direction: row;
+  width: 44px;
+  height: 44px;
+
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
 
-  padding: 8px 12px;
-
-  height: 36px;
+  padding: 0;
 
   background: var(--surface-alt);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 50%;
 
-  color: var(--text);
-  font-size: 0.78rem;
-  font-weight: 600;
-  line-height: 1;
-
-  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .profile-socials a img {
-  display: block !important;
-
-  width: 17px !important;
-  height: 17px !important;
-
-  max-width: 17px !important;
-  max-height: 17px !important;
-
+  display: block;
+  width: 22px;
+  height: 22px;
+  max-width: 22px;
+  max-height: 22px;
   object-fit: contain;
-  flex: 0 0 17px;
-}
-
-.profile-socials a span {
-  display: inline-block;
-  line-height: 1;
-  vertical-align: middle;
 }
 
 .profile-socials a:hover {
-  color: var(--accent);
-  border-color: var(--accent);
   background: var(--accent-soft);
+  border-color: var(--accent);
+  transform: translateY(-3px);
 }
 
 
