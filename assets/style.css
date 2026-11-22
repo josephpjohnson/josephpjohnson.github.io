@@ -951,28 +951,133 @@ button:focus-visible {
   border-color: var(--accent-soft);
 }
 /*================================================================*/
-.profile-institution {
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+/* =====================================================
+   REFINED ACADEMIC PROFILE CARD
+===================================================== */
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 1.5rem 1.4rem;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  box-shadow: var(--shadow);
+
+  gap: 0;
 }
+
+/* Photograph */
+
+.profile-image {
+  width: 142px;
+  height: 142px;
+
+  margin-bottom: 1rem;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  border: 3px solid var(--accent-soft);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+}
+
+/* Academic position */
+
+.profile-role {
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  color: var(--text);
+
+  margin-bottom: 0.3rem;
+}
+
+/* Institutional affiliation */
+
+.profile-affiliation {
+  font-size: 0.82rem;
+  line-height: 1.65;
+
+  color: var(--text-muted);
+
+  margin-bottom: 0.8rem;
+}
+
+.profile-affiliation a {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Email */
 
 .profile-email {
+  width: 100%;
+
+  padding: 0.7rem 0;
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+
   font-size: 0.84rem;
-  margin-bottom: 1.1rem;
+  font-weight: 500;
+
+  margin-bottom: 0.85rem;
 }
 
-.profile-institution a,
-.profile-email a {
+/* Social links */
+
+.profile-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.profile-socials a {
+  font-size: 0.76rem;
+  font-weight: 500;
+
+  color: var(--text-muted);
+
+  padding: 0.35rem 0.55rem;
+
+  border: 1px solid var(--border);
+  border-radius: 5px;
+
+  background: var(--surface-alt);
+
+  transition: all 0.2s ease;
+}
+
+.profile-socials a:hover {
   color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
 }
 
-.profile-institution a:hover,
-.profile-email a:hover {
-  color: var(--accent-hover);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+/* Mobile */
+
+@media (max-width: 780px) {
+  .profile-card {
+    max-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
-/* =========================================================
-   END OF STYLESHEET
-========================================================= */
+/*========================================================= */
