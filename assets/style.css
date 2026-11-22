@@ -1023,46 +1023,76 @@ button:focus-visible {
 
 /* Social media icon buttons */
 
+
+/* Social icon buttons — final override */
+
 .profile-socials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-  margin-top: 0.5rem;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 14px !important;
+  width: 100% !important;
+  margin: 12px auto 0 !important;
 }
 
 .profile-socials a {
-  width: 44px;
-  height: 44px;
+  box-sizing: border-box !important;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
 
-  padding: 0;
+  height: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
 
-  background: var(--surface-alt);
-  border: 1px solid var(--border);
-  border-radius: 50%;
+  padding: 0 !important;
+  margin: 0 !important;
 
-  transition: all 0.2s ease;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  flex: 0 0 44px !important;
+
+  border-radius: 50% !important;
+  border: 1px solid var(--border) !important;
+  background: var(--surface-alt) !important;
+
+  line-height: 1 !important;
+  overflow: hidden !important;
 }
 
 .profile-socials a img {
-  display: block;
-  width: 22px;
-  height: 22px;
-  max-width: 22px;
-  max-height: 22px;
-  object-fit: contain;
+  display: block !important;
+
+  width: 22px !important;
+  height: 22px !important;
+
+  min-width: 22px !important;
+  max-width: 22px !important;
+
+  min-height: 22px !important;
+  max-height: 22px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  object-fit: contain !important;
+  flex: 0 0 22px !important;
 }
 
 .profile-socials a:hover {
-  background: var(--accent-soft);
-  border-color: var(--accent);
-  transform: translateY(-3px);
+  background: var(--accent-soft) !important;
+  border-color: var(--accent) !important;
+  transform: translateY(-2px);
+}
+
+/* Hide any leftover button text */
+.profile-socials a span {
+  display: none !important;
 }
 
 
-/*============================================= */
+/*============================================== */
