@@ -1080,4 +1080,50 @@ button:focus-visible {
     margin: 0 auto;
   }
 }
+
+/* Profile social icon buttons */
+
+.profile-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  width: 100%;
+}
+
+.profile-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+
+  padding: 0.48rem 0.7rem;
+
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  background: var(--surface);
+  color: var(--text);
+
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+.profile-socials a img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+.profile-socials a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+
 /*========================================================= */
