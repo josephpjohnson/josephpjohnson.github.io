@@ -1021,52 +1021,58 @@ button:focus-visible {
 }
 
 
-/* Social media icon buttons */
+/* FINAL FIX: Horizontal circular social buttons */
 
+.profile-card .profile-socials {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
 
+  flex-wrap: nowrap !important;
+  gap: 14px;
 
-/* SOCIAL ICONS — CENTERING FIX */
-
-
-/* Fix: prevent profile photo styles affecting social logos */
+  width: 100%;
+  margin: 0 auto;
+}
 
 .profile-card .profile-socials a {
-  width: 44px !important;
-  height: 44px !important;
-  min-width: 44px !important;
-  min-height: 44px !important;
-  max-width: 44px !important;
-  max-height: 44px !important;
-
   display: flex !important;
+  flex-direction: row !important;
   align-items: center !important;
   justify-content: center !important;
+
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
 
   padding: 0 !important;
   margin: 0 !important;
 
   border-radius: 50% !important;
-  overflow: hidden !important;
-  flex: 0 0 44px !important;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+
+  flex-shrink: 0;
 }
 
 .profile-card .profile-socials a img {
+  display: block !important;
+
   width: 22px !important;
   height: 22px !important;
 
-  min-width: 22px !important;
-  min-height: 22px !important;
   max-width: 22px !important;
   max-height: 22px !important;
 
-  display: block !important;
-  object-fit: contain !important;
-
-  border: none !important;
-  border-radius: 0 !important;
-
+  object-fit: contain;
   margin: 0 !important;
-  padding: 0 !important;
+}
+
+.profile-card .profile-socials a:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  transform: translateY(-3px);
 }
 
 
