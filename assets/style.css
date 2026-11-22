@@ -1126,4 +1126,26 @@ button:focus-visible {
   transform: translateY(-2px);
 }
 
+/* Fix social logo dimensions */
+.profile-socials a img {
+  width: 18px !important;
+  height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+  object-fit: contain;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Keep buttons compact */
+.profile-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 7px 11px;
+  font-size: 0.78rem;
+  line-height: 1;
+}
+
 /*========================================================= */
