@@ -189,8 +189,9 @@ header {
   color: var(--text);
 }
 
+.brand,
 .brand span {
-  color: var(--accent);
+  color: var(--text);
 }
 
 nav {
